@@ -66,6 +66,11 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            mWordList.clear();
+            for (int i = 0; i < 20; i++) {
+                mWordList.addLast("Đồ chơi " + i);
+            }
+            mAdapter.notifyDataSetChanged();
             return true;
         }
 
